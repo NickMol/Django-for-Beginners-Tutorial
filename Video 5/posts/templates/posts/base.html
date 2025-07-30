@@ -1,0 +1,25 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our blogpost app</title>
+    
+    <link rel="stylesheet" href="{% static 'posts/main.css'%}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        This is my navbar
+    </nav>
+
+    <div>
+        {%block content%}
+        {%endblock%}
+    </div>
+</body>
+
+</html>
