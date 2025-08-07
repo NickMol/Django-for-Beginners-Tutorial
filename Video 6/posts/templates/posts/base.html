@@ -1,0 +1,42 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our blogpost app</title>
+    
+    <link rel="stylesheet" href="{% static 'posts/main.css'%}">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+                <img class="logo" src="{% static 'posts/MyAppLogo.png'%}" alt="My image"> 
+            </a>
+        </div>
+
+         <ul class="navbar-links"> 
+            <li>
+                <a href="{% url 'home'%}" class="{% if request.path == '/'%}active{%endif%}"> Home</a>
+            </li>
+            <li> 
+                <a href="{% url 'blogposts'%}" class="{% if request.path == '/blogposts'%}active{%endif%}"> My blogposts</a> 
+            </li>
+            
+            <li>
+                <a href="#" class="{% if request.path == '#'%}active{%endif%}"> Signed in as : User 1 </a>
+            </li>
+         </ul>
+    </nav>
+
+    <div>
+        {%block content%}
+        {%endblock%}
+    </div>
+</body>
+
+</html>
