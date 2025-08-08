@@ -1,0 +1,20 @@
+{% extends "posts/base.html"%}
+
+{%block content%}
+
+    <div class="main-container">
+        <div class="topbar">
+            <h1 class="title">Create a blogpost</h1>
+            
+        </div>
+
+        <form method="post">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn">Submit your post</button>
+        </form>
+
+    </div>
+
+
+{%endblock%}

@@ -1,0 +1,16 @@
+{% extends "posts/base.html"%}
+
+{%block content%}
+    
+<div class="main-container">
+    <div class="topbar">
+        <h1 class="title">Blogposts of User1</h1>
+        <a href="{% url 'create' %}">Create blogpost</a>
+    </div>
+
+    <div>
+        Space for all of our posts...
+    </div>
+</div>
+
+{%endblock%}
